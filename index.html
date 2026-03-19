@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ROCK DODGE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-screen" style="display: flex;">
+        <div class="login-box">
+            <h1>ROCK DODGE</h1>
+            <input type="text" id="username" placeholder="プレイヤー名" autocomplete="off">
+            <input type="password" id="password" placeholder="パスワード">
+            <button type="button" id="loginBtn" onclick="login()">ログイン / 新規登録</button>
+        </div>
+    </div>
+
+    <div id="game-container" style="display: none;">
+        <div id="settings-icon" onclick="toggleMenu()">⚙️</div>
+        <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div id="menu-overlay" style="display: none;">
+        <div class="menu-content">
+            <h2>PAUSE</h2>
+            <button onclick="showRanking()">世界ランク</button>
+            <button onclick="saveGame()">セーブ</button>
+            <button onclick="logout()">ログアウト</button>
+            <button onclick="toggleMenu()">戻る</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
